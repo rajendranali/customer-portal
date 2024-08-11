@@ -18,7 +18,7 @@ const CustomerCard: React.FC<CustomerCardProps> = ({
       onClick={onClick}
     >
       <h3>{customer.name}</h3>
-      <p>{customer.title}</p>
+      <p style={{fontSize:"8.5px",color:"gray"}}>{customer.title}</p>
     </div>
   );
 };

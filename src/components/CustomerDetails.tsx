@@ -15,7 +15,7 @@ const CustomerDetails: React.FC = () => {
 
   return (
     <div className="customer-details">
-      <h2>{selectedCustomer.name}</h2>
+      <h2 style={{color:"black"}}>{selectedCustomer.name}</h2>
       <p>{selectedCustomer.title}</p>
       <p>{selectedCustomer.address}</p>
       <PhotoGrid customerId={selectedCustomer.id} />
