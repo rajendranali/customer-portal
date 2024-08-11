@@ -10,7 +10,6 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ customerId }) => {
   const [photos, setPhotos] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  // Fallback photos if the API fails
   const defaultPhotos = [
     "https://images.unsplash.com/photo-1722260613137-f8f5ac432d69?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
     "https://images.unsplash.com/photo-1722352565642-47e4942af628?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8",
@@ -26,6 +25,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ customerId }) => {
     "https://images.unsplash.com/photo-1722156855407-2775911d0174?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4OHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1723040175971-e16d4c8d5f6a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNTd8fHxlbnwwfHx8fHw%3D",
   ];
+
   const fetchPhotos = async () => {
     try {
       const response = await axios.get(

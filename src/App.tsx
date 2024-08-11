@@ -127,7 +127,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <div className="heading">Customer Management</div>
+      {/* <div className="heading">Customer Management</div> */}
       <div className="container">
         <div className="sidebar">
           <CustomerList />
